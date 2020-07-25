@@ -4,4 +4,4 @@
 
 Dockerized [zapcc](https://github.com/yrnkrn/zapcc)
 
-> docker run -v $PWD:/lizard --rm srzzuimx/zapcc
+> docker run -v $PWD:/work -w /work --rm srzzuimx/zapcc
