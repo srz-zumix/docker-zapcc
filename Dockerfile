@@ -20,4 +20,6 @@ RUN cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_WARNINGS=OFF \
         ../llvm && \
     ninja && ninja install
 
+ENV CXX=zapcc++
+ENV CC=zapcc
 ENTRYPOINT ["zapcc"]
