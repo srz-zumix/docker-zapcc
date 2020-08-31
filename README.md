@@ -5,4 +5,4 @@
 
 Dockerized [zapcc](https://github.com/yrnkrn/zapcc)
 
-> docker run -v $(pwd):/work -w /work --rm -it srzzumix/zapcc
+> docker run -v $(pwd):/work -w /work --rm -it srzzumix/zapcc make
