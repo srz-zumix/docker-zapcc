@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update -q -y && \
     apt-get install -y --no-install-recommends software-properties-common apt-transport-https && \
     apt-get update -q -y && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
         make cmake build-essential ninja-build git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
