@@ -1,8 +1,10 @@
 name: Cron Trigger
 on:
-  pull_request:
-#   schedule:
-#     - cron: '0 0 1,15 * *'
+  schedule:
+    - cron: '0 0 1,15 * *'
+  push:
+    branches:
+      - feature/cron
   
 jobs:
   docker-build:
