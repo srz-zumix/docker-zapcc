@@ -3,8 +3,6 @@ on:
   schedule:
     - cron: '0 0 1,15 * *'
   push:
-    branches:
-      - feature/cron
   
 jobs:
   docker-build:
