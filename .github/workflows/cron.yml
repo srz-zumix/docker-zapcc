@@ -2,8 +2,10 @@ name: Cron Trigger
 on:
   schedule:
     - cron: '0 0 1,15 * *'
-  pull_request:      
-
+  pull_request:
+    branches:
+      - master
+  
 jobs:
   docker-build:
     runs-on: ubuntu-latest
