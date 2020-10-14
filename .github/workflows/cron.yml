@@ -1,0 +1,11 @@
+name: Cron Trigger
+on:
+  schedule:
+    - cron: '0 0 1,15 * *'
+  
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -X POST ${{ secrets.BUILD_URL }}
