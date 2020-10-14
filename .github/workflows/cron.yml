@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        curl -X POST ${{ secrets.BUILD_URL }}
+          curl -X POST ${{ secrets.BUILD_URL }}
