@@ -1,4 +1,6 @@
-FROM ubuntu:latest
+ARG UBUNTU_VERSION=latest
+FROM ubuntu:$UBUNTU_VERSION
+ARG UBUNTU_VERSION
 
 LABEL maintainer "srz_zumix <https://github.com/srz-zumix>"
 
@@ -17,6 +19,9 @@ RUN apt-get update -q -y && \
         ../llvm && \
     ninja && ninja install && \
     rm -rf /var/lib/apt/lists/*
+
+WORKDIR /
+RUN rm -rf /tmp/build
 
 ENV CXX=zapcc++
 ENV CC=zapcc
