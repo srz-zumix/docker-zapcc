@@ -2,4 +2,4 @@
 set -eu
 
 docker build --build-arg -f $DOCKERFILE_PATH -t $IMAGE_NAME .
-docker build --build-arg UBUNTU_VERSION=18.04 -f $DOCKERFILE_PATH -t 18.04 .
+docker build --build-arg UBUNTU_VERSION=bionic -f $DOCKERFILE_PATH -t bionic .
