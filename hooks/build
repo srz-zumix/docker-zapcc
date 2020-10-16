@@ -1,5 +1,5 @@
 #!/bin/bash
 set -eu
 
-docker build --build-arg -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+docker build -f $DOCKERFILE_PATH -t $IMAGE_NAME .
 docker build --build-arg UBUNTU_VERSION=bionic -f $DOCKERFILE_PATH -t bionic .
