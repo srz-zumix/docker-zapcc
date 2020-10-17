@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-ZAPCC_VERSION=$(docker run --rm ${IMAGE_NAME} --version | grep version | sed "s/.*version[ ]*\([0-9]*\.[0-9]*\).*/\1/"))
+ZAPCC_VERSION=$(docker run --rm ${IMAGE_NAME} --version | grep version | sed "s/.*version[ ]*\([0-9]*\.[0-9]*\).*/\1/" )
 TAG_NAME=${DOCKER_TAG}-${ZAPCC_VERSION}
 docker tag ${IMAGE_NAME} ${DOCKER_REPO}:${TAG_NAME}
 docker push ${DOCKER_REPO}:${TAG_NAME}
