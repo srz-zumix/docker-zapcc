@@ -9,6 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 WORKDIR /tmp/build
 RUN apt-get update -q -y && \
     apt-get install -y --no-install-recommends software-properties-common apt-transport-https && \
+    add-apt-repository -y "ppa:git-core/ppa" && \
     apt-get update -q -y && \
     apt-get install -y --no-install-recommends \
         make cmake build-essential ninja-build git && \
