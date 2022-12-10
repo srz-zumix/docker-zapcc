@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 WORKDIR /tmp/build
 RUN apt-get update -q -y && \
-    apt-get install -y --no-install-recommends software-properties-common apt-transport-https && \
+    apt-get install -y --no-install-recommends software-properties-common apt-transport-https gpg-agent && \
     add-apt-repository -y "ppa:git-core/ppa" && \
     apt-get update -q -y && \
     apt-get install -y --no-install-recommends \
