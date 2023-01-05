@@ -12,7 +12,7 @@ RUN apt-get update -q -y && \
     add-apt-repository -y "ppa:git-core/ppa" && \
     apt-get update -q -y && \
     apt-get install -y --no-install-recommends \
-        make cmake build-essential ninja-build git && \
+        make cmake build-essential ninja-build git libc6 && \
     apt-get clean && \
     git clone https://github.com/yrnkrn/zapcc.git ../llvm && \
     cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_WARNINGS=OFF \
